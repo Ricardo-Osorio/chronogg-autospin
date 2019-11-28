@@ -2,11 +2,11 @@
 
 build:
 	mkdir -p package && \
+	virtualenv chronogg && \
+	source chronogg/bin/activate && \
 	pip3 install -t ./package requests && \
-	cd package && \
-	zip -r9 main.zip . && \
-	mv main.zip .. && \
-	cd .. && \
+	deactivate && \
+	zip -r9 main.zip ./package && \
 	zip -g main.zip main.py
 
 deploy: build

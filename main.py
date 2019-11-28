@@ -18,9 +18,11 @@ def spinCoin(jwt):
         if resp is not None and resp != "":
             print('response json: ', resp)
         gain = resp['quest']['value']+resp['quest']['bonus']
-        # haven't seen the response from the request when it's a chest spin
-        # gain_chest = resp['chest']
-        print('spun coin for a total of {} points'.format(gain))
+        chest_gain = resp['chest']['base']+resp['chest']['bonus'] if len(resp['chest']) else 0
+        msg = 'spun coin for a total of {} points'.format(gain)
+        if chest_gain > 0:
+            msg += 'plus {} from a chest'.format(chest_gain)
+        print(msg)
         getCoins(jwt)
     elif response.status_code == 420:
         print('spin is still in cooldown')
