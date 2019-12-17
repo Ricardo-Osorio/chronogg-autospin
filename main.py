@@ -15,13 +15,11 @@ def spinCoin(jwt):
 
     if response.status_code == 200:
         resp = response.json()
-        if resp is not None and resp != "":
-            print('response json: ', resp)
         gain = resp['quest']['value']+resp['quest']['bonus']
         chest_gain = resp['chest']['base']+resp['chest']['bonus'] if len(resp['chest']) else 0
         msg = 'spun coin for a total of {} points'.format(gain)
         if chest_gain > 0:
-            msg += 'plus {} from a chest'.format(chest_gain)
+            msg += ' plus {} from a chest'.format(chest_gain)
         print(msg)
         getCoins(jwt)
     elif response.status_code == 420:
