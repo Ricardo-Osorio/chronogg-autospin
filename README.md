@@ -1,4 +1,3 @@
-`Still in development`
 # Automatically spin the coin at [ChronoGG](https://www.chrono.gg/)
 ChronoGG website has a cool feature that allows you to click a coin in their homepage (you can do this every 6h-24h) and receive a currency(coins) from it. 
 
@@ -7,7 +6,7 @@ After a few times of doing this you will have accomulate enough coins to then ex
 And I am all about free games but I don't like repeating the same process over and over again when it can be automated... And that's why I made this!
 
 ## What it is
-This is a simple python3.7 lambda function that will use your account [JWT token]() to spin the wheel at [ChronoGG](https://www.chrono.gg/) which in turn will accumulate and allow you to exchange this for free games .
+This is a simple python3.7 lambda function that will use your account [JWT token]() to spin the coin at [ChronoGG](https://www.chrono.gg/) which in turn will accumulate and allow you to exchange this for free games .
 
 ## Getting started
 Personally I avoid hosting such processes on my machine so I don't have to worry about having it turned ON during the times when it's supposed to run and this is a very small a quick process so I though it would be a perfect fit for an AWS Lambda function!
