@@ -6,7 +6,10 @@ build:
 	source chronogg/bin/activate && \
 	pip3 install -t ./package requests && \
 	deactivate && \
-	zip -r9 main.zip ./package && \
+	cd package && \
+	zip -r main.zip . && \
+	mv main.zip .. && \
+	cd .. && \
 	zip -g main.zip main.py
 
 deploy: build
