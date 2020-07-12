@@ -1,3 +1,6 @@
+# No longer usable
+On June 29th chronogg will stop having this feature on their website.
+
 # Automatically spin the coin at [ChronoGG](https://www.chrono.gg/)
 ChronoGG website has a cool feature that allows you to click a coin in their homepage (you can do this every 6h-24h) and receive a currency(coins) from it. 
 
